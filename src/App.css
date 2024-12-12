@@ -1,0 +1,57 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.header {
+  background-color: #f1f1f1;
+  padding: 10px;
+  text-align: center;
+  font-weight: bold;
+  border-bottom: 2px solid #000;
+}
+
+.main {
+  display: flex;
+  flex: 1;
+  padding: 10px;
+  gap: 10px; /* Add space between list and map */
+}
+
+.list {
+  flex: 1;
+  background-color: #f9f9f9;
+  padding: 10px;
+  border-right: 2px solid #000;
+  text-align: left;
+  overflow-y: auto; /* Enables scrolling if the list is too long */
+  max-height: calc(100vh - 50px); /* Ensure the list fits within the screen */
+}
+
+.map {
+  flex: 2;
+  background-color: #e0e0e0;
+  padding: 20px;
+  text-align: center;
+  overflow-y: auto; /* Enables scrolling if the map is too large */
+}
+
+/* Add responsiveness */
+@media (max-width: 768px) {
+  .main {
+    flex-direction: column; /* Stack list and map on smaller screens */
+  }
+
+  .list, .map {
+    flex: none;
+    width: 100%; /* Full width for both components */
+    margin-bottom: 10px; /* Space between list and map */
+  }
+}
