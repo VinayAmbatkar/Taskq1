@@ -88,7 +88,7 @@ const ProfileList = () => {
       </MuiList>
 
       {/* Display selected profile details */}
-      {selectedProfile && (
+      {/* {selectedProfile && (
         <Box sx={{ marginTop: '20px', padding: '16px', bgcolor: 'background.paper', borderRadius: '8px', boxShadow: '0px 2px 5px rgba(0,0,0,0.1)' }}>
           <Typography variant="h6" sx={{ marginBottom: '8px' }}>
             {selectedProfile.name}
@@ -100,7 +100,7 @@ const ProfileList = () => {
             {selectedProfile.description}
           </Typography>
         </Box>
-      )}
+      )} */}
     </Box>
   );
 };
